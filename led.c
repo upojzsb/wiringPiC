@@ -15,6 +15,8 @@ e| |f
 #include <time.h>
 #include <unistd.h>
 
+#define DELAY_TIME 5
+
 int n[10][8] ={
 	{1,1,1,0,1,1,1,0},
 	{0,0,1,0,0,1,0,0},
@@ -71,13 +73,13 @@ int main(void)
 
 	//if them show at the same time, the power is not enough
 	setled(1,n[h_1]);
-	sleep(1);
+	delay(DELAY_TIME);
 	setled(2,n[h_2]);
-	sleep(1);
+	delay(DELAY_TIME);
 	setled(3,n[m_1]);
-	sleep(1);
+	delay(DELAY_TIME);
 	setled(4,n[m_2]);
-	sleep(1);
+	delay(DELAY_TIME);
 
 	}
 }
